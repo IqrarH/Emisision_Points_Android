@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gotoRevise(View view) {
-        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        Uri webpage = Uri.parse("https://recitewithlove.files.wordpress.com/2015/12/chapter-3-makharij-ul-huroof-with-logo.pdf");
+        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
         startActivity(intent);
     }
 
