@@ -20,7 +20,9 @@ public class MainActivity3 extends AppCompatActivity {
             "The sound of  ہ أ is produced from:",
             "The sound of  ع ح is produced from:",
             "The sound of غ خ is produced from:",
-            "Arabic Letters  ع ح ہ أ خ غ belongs to:"
+            "Arabic Letters  ع ح ہ أ خ غ belongs to:",
+            "Arabic Letters ق ک belongs to:",
+            "Arabic Letters ج ش ی ض belongs to:",
     };
 
     String [] correctAnswers = new String[]{
@@ -28,6 +30,8 @@ public class MainActivity3 extends AppCompatActivity {
             "Middle of throat",
             "Start of the throat",
             "Halaqiya",
+            "Lahatiya",
+            "Shajariyah-Haafiyah",
     };
 
     String [][] options = new String[][]{
@@ -35,6 +39,8 @@ public class MainActivity3 extends AppCompatActivity {
             {"End of throat", "Middle of throat", "Start of the throat", "Middle of tongue"},
             {"End of throat", "Middle of throat", "Start of the throat", "Middle of tongue"},
             {"Lahatiya", "Halaqiya", "Tarfiyah", "None of the above"},
+            {"Lahatiya", "Halaqiya", "Tarfiyah", "None of the above"},
+            {"Lahatiya", "Halaqiya", "Shajariyah-Haafiyah", "None of the above"},
     };
 
     TextView tv;
