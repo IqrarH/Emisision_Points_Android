@@ -25,7 +25,8 @@ public class MainActivity3 extends AppCompatActivity {
             "Arabic Letters ج ش ی ض belongs to:",
             "Arabic Letters ل ن ر belongs to:",
             "The sound of Nit-eeyah is produced from:",
-            "Lisaveyah letters are: "
+            "Lisaveyah letters are: ",
+            "Ghunna letters are:",
     };
 
     String [] correctAnswers = new String[]{
@@ -37,7 +38,8 @@ public class MainActivity3 extends AppCompatActivity {
             "Shajariyah-Haafiyah",
             "Tarfiyah",
             "Tip of the tongue touching the base of the front 2 teeth",
-            "All of the above"
+            "All of the above",
+            "Both A & B",
     };
 
     String [][] options = new String[][]{
@@ -49,7 +51,8 @@ public class MainActivity3 extends AppCompatActivity {
             {"Lahatiya", "Halaqiya", "Shajariyah-Haafiyah", "None of the above"},
             {"Lahatiya", "Halaqiya", "Tarfiyah", "None of the above"},
             {"Tip of the tongue touching the base of the front 2 teeth", "Middle of throat", "Start of the throat", "Middle of tongue"},
-            {"ظ", "ذ", "ث", "All of the above"}
+            {"ظ", "ذ", "ث", "All of the above"},
+            {"ن", "م", "Both A & B", "None of the above"}
     };
 
     TextView tv;
@@ -76,10 +79,12 @@ public class MainActivity3 extends AppCompatActivity {
     }
 
     public void nextMcq(View view) {
-        tv.setText(mcqs[++count]);
-        rb1.setText(options[count][0]);
-        rb2.setText(options[count][1]);
-        rb3.setText(options[count][2]);
-        rb4.setText(options[count][3]);
+        if(count < 10) {
+            tv.setText(mcqs[++count]);
+            rb1.setText(options[count][0]);
+            rb2.setText(options[count][1]);
+            rb3.setText(options[count][2]);
+            rb4.setText(options[count][3]);
+        }
     }
 }
