@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -67,6 +68,9 @@ public class MainActivity3 extends AppCompatActivity {
     RadioGroup rg;
     Button nextBtn;
     Button finishBtn;
+    RadioButton selectedRadioBtn;
+    TextView temp;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +85,7 @@ public class MainActivity3 extends AppCompatActivity {
         rb4 = findViewById(R.id.rb4);
         nextBtn = findViewById(R.id.button4);
         finishBtn = findViewById(R.id.finishBtn);
+        temp = findViewById(R.id.textView6);
 
 
         finishBtn.setVisibility(View.GONE);
@@ -93,6 +98,10 @@ public class MainActivity3 extends AppCompatActivity {
     }
 
     public void nextMcq(View view) {
+
+        int id = rg.getCheckedRadioButtonId();
+        selectedRadioBtn = findViewById(id);
+        temp.setText(selectedRadioBtn.getText());
         rg.clearCheck();
         int qCount = count + 2;
         if(count < 9) {
