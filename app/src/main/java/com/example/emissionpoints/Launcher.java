@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class Launcher extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +17,7 @@ public class Launcher extends AppCompatActivity {
 
 
     }
+
 
     public void gotoApp(View view) {
         Intent intent = new Intent(Launcher.this, MainActivity.class);
