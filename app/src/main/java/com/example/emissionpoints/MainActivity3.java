@@ -70,6 +70,7 @@ public class MainActivity3 extends AppCompatActivity {
     Button finishBtn;
     RadioButton selectedRadioBtn;
     TextView temp;
+    int correct = 0;
 
 
     @Override
@@ -98,10 +99,14 @@ public class MainActivity3 extends AppCompatActivity {
     }
 
     public void nextMcq(View view) {
-
         int id = rg.getCheckedRadioButtonId();
         selectedRadioBtn = findViewById(id);
-        temp.setText(selectedRadioBtn.getText());
+        if(selectedRadioBtn.getText() == correctAnswers[count]){
+            temp.setText("Correct");
+            correct++;
+        }
+
+
         rg.clearCheck();
         int qCount = count + 2;
         if(count < 9) {
