@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class MainActivity3 extends AppCompatActivity {
@@ -56,20 +58,27 @@ public class MainActivity3 extends AppCompatActivity {
     };
 
     TextView tv;
+    TextView qNoTv;
     RadioButton rb1;
     RadioButton rb2;
     RadioButton rb3;
     RadioButton rb4;
+    RadioGroup rg;
+    Button nextBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         tv = findViewById(R.id.questionTv);
+        qNoTv = findViewById(R.id.qNoTv);
+        rg = findViewById(R.id.rg);
         rb1 = findViewById(R.id.rb1);
         rb2= findViewById(R.id.rb2);
         rb3 = findViewById(R.id.rb3);
         rb4 = findViewById(R.id.rb4);
+        nextBtn = findViewById(R.id.button4);
+
         tv.setText(mcqs[0]);
         rb1.setText(options[0][0]);
         rb2.setText(options[0][1]);
@@ -79,12 +88,18 @@ public class MainActivity3 extends AppCompatActivity {
     }
 
     public void nextMcq(View view) {
-        if(count < 10) {
+        rg.clearCheck();
+        int qCount = count + 2;
+        if(count < 9) {
+            qNoTv.setText(String.valueOf(qCount++));
             tv.setText(mcqs[++count]);
             rb1.setText(options[count][0]);
             rb2.setText(options[count][1]);
             rb3.setText(options[count][2]);
             rb4.setText(options[count][3]);
+            if(count == 9){
+                nextBtn.setEnabled(false);
+            }
         }
     }
 }

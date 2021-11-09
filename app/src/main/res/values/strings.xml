@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Emission Points</string>
+    <string name="total">10</string>
 </resources>
