@@ -2,6 +2,7 @@ package com.example.emissionpoints;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -65,6 +66,7 @@ public class MainActivity3 extends AppCompatActivity {
     RadioButton rb4;
     RadioGroup rg;
     Button nextBtn;
+    Button finishBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +80,10 @@ public class MainActivity3 extends AppCompatActivity {
         rb3 = findViewById(R.id.rb3);
         rb4 = findViewById(R.id.rb4);
         nextBtn = findViewById(R.id.button4);
+        finishBtn = findViewById(R.id.finishBtn);
 
+
+        finishBtn.setVisibility(View.GONE);
         tv.setText(mcqs[0]);
         rb1.setText(options[0][0]);
         rb2.setText(options[0][1]);
@@ -99,7 +104,13 @@ public class MainActivity3 extends AppCompatActivity {
             rb4.setText(options[count][3]);
             if(count == 9){
                 nextBtn.setEnabled(false);
+                finishBtn.setVisibility(View.VISIBLE);
             }
         }
+    }
+
+    public void finish(View view) {
+        Intent intent = new Intent(MainActivity3.this,MainActivity4.class);
+        startActivity(intent);
     }
 }
