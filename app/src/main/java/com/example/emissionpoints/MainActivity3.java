@@ -23,6 +23,9 @@ public class MainActivity3 extends AppCompatActivity {
             "Arabic Letters  ع ح ہ أ خ غ belongs to:",
             "Arabic Letters ق ک belongs to:",
             "Arabic Letters ج ش ی ض belongs to:",
+            "Arabic Letters ل ن ر belongs to:",
+            "The sound of Nit-eeyah is produced from:",
+            "Lisaveyah letters are: "
     };
 
     String [] correctAnswers = new String[]{
@@ -32,6 +35,9 @@ public class MainActivity3 extends AppCompatActivity {
             "Halaqiya",
             "Lahatiya",
             "Shajariyah-Haafiyah",
+            "Tarfiyah",
+            "Tip of the tongue touching the base of the front 2 teeth",
+            "All of the above"
     };
 
     String [][] options = new String[][]{
@@ -41,6 +47,9 @@ public class MainActivity3 extends AppCompatActivity {
             {"Lahatiya", "Halaqiya", "Tarfiyah", "None of the above"},
             {"Lahatiya", "Halaqiya", "Tarfiyah", "None of the above"},
             {"Lahatiya", "Halaqiya", "Shajariyah-Haafiyah", "None of the above"},
+            {"Lahatiya", "Halaqiya", "Tarfiyah", "None of the above"},
+            {"Tip of the tongue touching the base of the front 2 teeth", "Middle of throat", "Start of the throat", "Middle of tongue"},
+            {"ظ", "ذ", "ث", "All of the above"}
     };
 
     TextView tv;
