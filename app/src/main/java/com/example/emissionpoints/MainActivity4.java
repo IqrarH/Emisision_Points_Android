@@ -15,6 +15,6 @@ public class MainActivity4 extends AppCompatActivity {
 
         tv = findViewById(R.id.textView8);
         Intent intent = getIntent();
-        tv.setText(intent.getStringExtra("score"));
+        tv.setText(String.valueOf(intent.getIntExtra("score", 0)));
     }
 }

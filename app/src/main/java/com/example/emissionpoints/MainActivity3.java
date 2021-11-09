@@ -69,7 +69,6 @@ public class MainActivity3 extends AppCompatActivity {
     Button nextBtn;
     Button finishBtn;
     RadioButton selectedRadioBtn;
-    TextView temp;
     int correct = 0;
 
 
@@ -86,7 +85,6 @@ public class MainActivity3 extends AppCompatActivity {
         rb4 = findViewById(R.id.rb4);
         nextBtn = findViewById(R.id.button4);
         finishBtn = findViewById(R.id.finishBtn);
-        temp = findViewById(R.id.textView6);
 
 
         finishBtn.setVisibility(View.GONE);
@@ -101,8 +99,7 @@ public class MainActivity3 extends AppCompatActivity {
     public void nextMcq(View view) {
         int id = rg.getCheckedRadioButtonId();
         selectedRadioBtn = findViewById(id);
-        if(selectedRadioBtn.getText() == correctAnswers[count]){
-            temp.setText("Correct");
+        if(selectedRadioBtn != null && selectedRadioBtn.getText() == correctAnswers[count]){
             correct++;
         }
 
@@ -124,8 +121,12 @@ public class MainActivity3 extends AppCompatActivity {
     }
 
     public void finish(View view) {
+        int id = rg.getCheckedRadioButtonId();
+        selectedRadioBtn = findViewById(id);
+        if(selectedRadioBtn != null &&  selectedRadioBtn.getText() == correctAnswers[9]){
+            correct++;
+        }
         Intent intent = new Intent(MainActivity3.this,MainActivity4.class);
-
         intent.putExtra("score",  correct);
         startActivity(intent);
     }
