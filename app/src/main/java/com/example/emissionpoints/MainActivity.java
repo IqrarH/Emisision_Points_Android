@@ -12,14 +12,6 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-//    String [] halaqiya = new String[]{"خ","غ","ح","ع","أ","ہ"};
-//    String [] lahatiya = new String[]{"ک","ق"};
-//    String [] shajariyahHaafiyah = new String[]{"ض","ی","ش","ج"};
-//    String [] tarfiyah = new String[]{"ر","ن","ل"};
-//    String [] niteeyah = new String[]{"ط","د","ت"};
-//    String [] lisaveyah = new String[]{"ث","ذ","ظ","س","ز","ص"};
-//    String [] ghunna = new String[]{"ن","م"};
-
     TextView tv;
     Button nextBtn;
 
