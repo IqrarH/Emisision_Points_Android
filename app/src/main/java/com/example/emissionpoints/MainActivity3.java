@@ -125,7 +125,8 @@ public class MainActivity3 extends AppCompatActivity {
 
     public void finish(View view) {
         Intent intent = new Intent(MainActivity3.this,MainActivity4.class);
-        intent.putExtra("score", correct);
+
+        intent.putExtra("score",  correct);
         startActivity(intent);
     }
 }
